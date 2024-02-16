@@ -85,17 +85,17 @@ html {
   --h6-color: #2d1b08;
   --primary-text-color: #222;
   --holding-page-title-color: #ebedf0;
-  --accent-color: #5200ff;
-  --overlay-color: #5200ff;
-  --overlay-title-color: #ffffff;
-  --overlay-description-color: #ffffff;
+  --accent-color: #83b0f5;
+  --overlay-color: #fcfbf6;
+  --overlay-title-color: #2D1B08;
+  --overlay-description-color: #2D1B08;
   --hyperlink-color: #2d1b08;
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
   --visited-color: #5200ff;
-  --project-title-color: #5200ff;
-  --project-sidebar-background-color: orangered;
-  --project-sidebar-text-color: white;
+  --project-title-color: #2d1b08;
+  --project-sidebar-background-color: transparent;
+  --project-sidebar-text-color: #2d1b08;
   --heart-color: darkred;
   --holding-page-footer-color: #f8f8ff;
   --text-selection-background-color: #5200ff;
@@ -563,7 +563,7 @@ a:active {
 
 .project-details {
   width: 100%;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* 
@@ -830,7 +830,7 @@ a.sub-navigation-link:hover {
   }
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-gap: 1rem;
   }
 
