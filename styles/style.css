@@ -215,16 +215,6 @@ em {
   margin-bottom: 1rem;
 }
 
-.overlay-title {
-  font-size: 2.875rem;
-  color: var(--overlay-title-color);
-}
-
-.overlay-description {
-  color: var(--overlay-description-color);
-  text-align: center;
-}
-
 /* Hyperlink Styles */
 
 a:link {
@@ -300,6 +290,16 @@ a:active {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
+
+/* on the project page */
+.project-name {
+  font-size: 1.5rem;
+  }
+  
+  .project-subtitle {
+    font-size: 2.5rem;
+  }
+
 
 /* Hero 
 
@@ -393,7 +393,7 @@ a:active {
   /* Required to contain overlay size */
 }
 
-.project-image {
+.project-cover-image {
   border-radius: 40px;
   width: 100%;
   height: auto;
@@ -471,7 +471,7 @@ a:active {
   grid-row: 1 / 2;
   background: #E3C5FF;
   border-radius: 40px;
-  padding: 4vw;
+  padding: 3vh;
 }
 
 
@@ -480,7 +480,7 @@ a:active {
   grid-row: 2 / 3;
   background: #AAE593;
   border-radius: 40px;
-  padding: 4vw;
+  padding: 3vh;
 }
 
 .footer-item-3 {
@@ -511,13 +511,32 @@ a:active {
 }
 
 /* Sidebar */
-.project-aside {
+/* .project-aside {
   width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   color: var(--project-sidebar-text-color);
   background: var(--project-sidebar-background-color);
+} */
+
+.project-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.project-info-main {
+grid-column: 1 / 2;
+grid-row: 1 / 2;
+}
+
+.project-info-sub {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-navigation {
@@ -540,8 +559,9 @@ a:active {
 }
 
 .project-image {
+  border-radius: 40px;
   width: 100%;
-  /* min-height: 50vh; */
+  min-height: 40vh;
   /* min-height should be deleted if you want to remove space between project images on project pages */
   display: flex;
   align-items: center;
@@ -566,7 +586,6 @@ a:active {
 
 .project-details {
   width: 100%;
-  /* padding: 1rem; */
 }
 
 /* 
@@ -887,23 +906,42 @@ a.sub-navigation-link:hover {
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
 
+.project-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.project-info-main {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+}
+
+.project-info-sub {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+}
+
   /* Sidebar on Large Devices */
-  .project-aside {
+  /* .project-aside {
     width: 35%;
     height: 65vh;
     position: -webkit-sticky;
     position: sticky;
     top: 5vh;
     padding-right: 2rem;
-  }
+  } */
 
   /* Main Project Image Area on Large Devices */
-  .project-details {
-    width: 65%;
-  }
+  /* .project-details {
+    width: 100%;
+  } */
 
   .project-image {
     /* min-height: 70vh; */
