@@ -300,7 +300,15 @@ a:active {
     font-size: 2.5rem;
   }
 
+.info-sub-title {
+font-size: 0.875rem;
+font-weight: 600;
+margin-bottom: 0;
+}
 
+.info-sub-content {
+font-size: 1rem;
+}
 /* Hero 
 
 ██   ██ ███████ ██████   ██████  
@@ -523,7 +531,7 @@ a:active {
 .project-info {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-gap: 1rem;
 }
 
@@ -536,14 +544,25 @@ grid-row: 1 / 2;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 3vw;
+}
+
+.info-sub {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 30%;
+  /* border: black 2px solid; */
 }
 
 .project-navigation {
   display: flex;
   flex-direction: row;
   flex: 1;
-  align-items: flex-end;
+  padding: 3vh 0 3vh 0;
+  /* align-items: flex-end; */
   justify-content: space-between;
 }
 
@@ -581,6 +600,8 @@ grid-row: 1 / 2;
   font-size: 3.25rem;
   padding: 3rem;
 }
+
+
 
 /* Main Project Image Area */
 
@@ -926,6 +947,16 @@ a.sub-navigation-link:hover {
   grid-row: 1/2;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 3vh;
+}
+
+.info-sub {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+
 }
 
   /* Sidebar on Large Devices */
@@ -952,9 +983,23 @@ a.sub-navigation-link:hover {
     flex-direction: row;
   }
 
-  .project-navigation {
-    justify-content: flex-start;
+  .project-subtitle {
+    font-size: 3.75rem;
   }
+
+  .info-sub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    }
+    
+    .info-sub-content {
+    font-size: 1.25rem;
+    }
+
+
+  /* .project-navigation {
+    justify-content: flex-start;
+  } */
 
   .arrow {
     padding-right: 1rem;
