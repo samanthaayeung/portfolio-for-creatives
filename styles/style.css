@@ -1081,7 +1081,7 @@ a.sub-navigation-link:hover {
   .about-intro-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    min-height: 65vh;
+    min-height: 90vh;
   }
   
   .about-intro-2 {
