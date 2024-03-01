@@ -455,8 +455,7 @@ background: url(../assets/about/about-image.jpg);
 background-size: cover;
 background-position: top center;
 border-radius: 2.5rem;
-min-height: 50vh;
-
+min-height: 40vh;
 }
 
 .about-intro-2 {
@@ -519,7 +518,7 @@ min-height: 50vh;
 }
 
 .content-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0;
 }
 
