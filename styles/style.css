@@ -407,8 +407,8 @@ font-size: 1rem;
   /* Required to contain overlay size */
 }
 
-.project-cover-image {
-  border-radius: 40px;
+.project-image {
+  border-radius: 2.5rem;
   width: 100%;
   height: auto;
   position: relative;
@@ -435,11 +435,11 @@ font-size: 1rem;
 ██   ██ ██████   ██████   ██████     ██    
                                            
 */
-.about-page {
+/* .about-page {
 
-}
+} */
 
-.about {
+.about-intro {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 1fr;
@@ -448,30 +448,89 @@ font-size: 1rem;
   padding: 1rem;
 }
 
-.about-item-1 {
+.about-intro-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  border: 2px solid black;
-  border-radius: 40px;
+background: url(../assets/about/about-image.jpg);
+background-size: cover;
+background-position: top center;
+border-radius: 2.5rem;
+min-height: 50vh;
 
 }
 
-.about-item-2 {
+.about-intro-2 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   background: #E3C5FF;
-  border-radius: 40px;
+  border-radius: 2.5rem;
+  padding: 3vh;
+  display: grid;
+}
+
+.about-contents {
+  display: grid;
+  padding: 0 1rem 0 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1rem;
+}
+
+.about-contents-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: #AAE593;
+  border-radius: 2.5rem;
+  padding: 3vh;
+  display:grid;
+}
+
+.about-contents-2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background: #83B0F5;
+  border-radius: 2.5rem;
   padding: 3vh;
 }
 
 
-
 .about-image {
-  border-radius: 40px;
+  border-radius: 2.5rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.about-description {
+  align-self: end;
+}
+
+.content-item {
+  align-self: end;
+  border: red 2px solid;
+}
+
+.content-subtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 2px solid black;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  border: 2px solid black;
+}
+
+.content-description {
+  font-size: 1rem;
+  border: 2px solid black;
+  margin-bottom: 0;
+}
+
+.awards {
+  display:grid;
+  grid-gap: 3vh;
 }
 
 /* Global Footer
@@ -487,7 +546,7 @@ font-size: 1rem;
 .global-footer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr auto;
+  grid-template-rows: 1fr auto auto;
   grid-gap: 1rem;
   min-height: 30vh;
   background: var(--background-color-footer);
@@ -498,8 +557,9 @@ font-size: 1rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   background: #E3C5FF;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   padding: 3vh;
+  min-height: 30vh;
 }
 
 
@@ -507,7 +567,7 @@ font-size: 1rem;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   background: #AAE593;
-  border-radius: 40px;
+  border-radius: 2.5rem;
   padding: 3vh;
 }
 
@@ -534,6 +594,7 @@ font-size: 1rem;
 
 .project-wrapper {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -590,18 +651,9 @@ grid-row: 1 / 2;
   padding: 0;
 }
 
-.project-image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .project-image {
-  border-radius: 40px;
+  border-radius: 2.5rem;
   width: 100%;
-  min-height: 40vh;
-  /* min-height should be deleted if you want to remove space between project images on project pages */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -926,6 +978,7 @@ a.sub-navigation-link:hover {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     padding: 3vh;
+    min-height: 35vh;
   }
 
   .footer-item-2 {
@@ -968,15 +1021,13 @@ a.sub-navigation-link:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 3vh;
+  gap: 2vh;
 }
 
 .info-sub {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-
-
 }
 
   /* Sidebar on Large Devices */
@@ -1028,26 +1079,62 @@ a.sub-navigation-link:hover {
   /* about page */
   .about-page {
     width: 100%;
-    border: black 2px solid;
   }
 
-  .about {
+  .about-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
 
-  .about-item-1 {
+  .about-intro-1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    min-height: 65vh;
   }
   
-  .about-item-2 {
+  .about-intro-2 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     background: #E3C5FF;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     padding: 3vh;
+  }
+
+  .about-title {
+    font-size: 3.75rem;
+  
+  }
+
+  .about-contents {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .about-contents-1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .about-contents-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .content-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    }
+  
+  .content-title {
+    font-size: 1.875rem;
+  }
+  
+  .content-description {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 }
 
